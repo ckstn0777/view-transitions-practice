@@ -1,0 +1,34 @@
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+.view-title {
+  view-transition-name: view-title;
+}
+.view-description {
+  view-transition-name: view-desc;
+}
+.view-counter {
+  view-transition-name: view-count;
+}
+
+::view-transition-old(view-title),
+::view-transition-old(view-desc),
+::view-transition-old(view-count) {
+  animation-name: slideOut;
+}
+
+::view-transition-new(view-title),
+::view-transition-new(view-desc),
+::view-transition-new(view-count) {
+  animation-name: slideIn;
+}
