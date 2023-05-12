@@ -51,7 +51,7 @@ export default function Example1() {
       // 미래(이제는 현재) 보이는 요소는 fade-in 되어 화면에 보여집니다.
       futureMain.animate([{ opacity: 1 }], { duration: 1000 });
 
-      // 애니메이션이 종료되기 전 미리 미래요소를 현재요소로 교체 합니다.
+      // 애니메이션이 종료될 타이밍에 맞춰서 상태 변경과 스타일 변경 (아하~)
       setTimeout(() => {
         setCurrentViewItem(futureViewItem);
       }, 950);

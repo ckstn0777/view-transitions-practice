@@ -20,14 +20,14 @@ export default function ViewMain({
         <img
           src={item.img}
           alt="view main img"
-          className="absolute top-0 left-0 max-h-80 w-full object-cover z-10"
+          className="absolute top-0 left-0 max-h-80 w-full object-cover opacity-100"
           ref={mainRef}
         />
 
         <img
           src={futureItem?.img}
           alt="view main img"
-          className="absolute top-0 left-0 max-h-80 w-full object-cover"
+          className="absolute top-0 left-0 max-h-80 w-full object-cover opacity-0"
           ref={futureMainRef}
         />
       </div>
