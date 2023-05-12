@@ -1,4 +1,4 @@
-import { ViewItem } from "../types";
+import { ViewItem } from "../../types";
 
 type ViewMainProps = {
   mainRef: React.RefObject<HTMLImageElement>;

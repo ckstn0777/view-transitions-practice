@@ -33,7 +33,7 @@ function App() {
             </span>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href={`/view-transitions-practice/example/2`}
             className="main-card px-8 py-8"
@@ -43,7 +43,7 @@ function App() {
               View Transitions API 없이 구현하기
             </span>
           </a>
-        </li>
+        </li> */}
       </ul>
     </>
   );

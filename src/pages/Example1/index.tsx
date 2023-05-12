@@ -1,34 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import ViewAsideList from "../../components/ViewAsideList";
-import ViewMain from "../../components/ViewMain";
+import ViewAsideList from "../../components/Example1/ViewAsideList";
+import ViewMain from "../../components/Example1/ViewMain";
+import { items } from "../../model/Items";
 import { ViewItem } from "../../types";
-
-const items: ViewItem[] = [
-  {
-    id: 1,
-    title: "[0] This is title. A sample title. title sample.",
-    desc: "[0] Description area. a sample text.",
-    img: "/view-transitions-practice/album.jpeg",
-    like: 22,
-    view: 495,
-  },
-  {
-    id: 2,
-    title: "[1] This is title. A sample title. title sample.",
-    desc: "[1] Description area. a sample text.",
-    img: "/view-transitions-practice/album2.webp",
-    like: 18,
-    view: 564,
-  },
-  {
-    id: 3,
-    title: "[2] This is title. A sample title. title sample.",
-    desc: "[2] Description area. a sample text.",
-    img: "/view-transitions-practice/album3.jpeg",
-    like: 30,
-    view: 412,
-  },
-];
 
 export default function Example1() {
   const [currentViewItem, setCurrentViewItem] = useState(items[0]); // 현재 아이템
@@ -47,19 +21,19 @@ export default function Example1() {
 
     if (futureViewItem && main && futureMain) {
       // 현재(이제는 과거) 보이는 요소는 fade-out 되어 화면에서 사라집니다.
-      main.animate([{ opacity: 0 }], { duration: 1000 });
+      main.animate([{ opacity: 0 }], { duration: 200 });
       // 미래(이제는 현재) 보이는 요소는 fade-in 되어 화면에 보여집니다.
-      futureMain.animate([{ opacity: 1 }], { duration: 1000 });
+      futureMain.animate([{ opacity: 1 }], { duration: 200 });
 
       // 애니메이션이 종료될 타이밍에 맞춰서 상태 변경과 스타일 변경 (아하~)
       setTimeout(() => {
         setCurrentViewItem(futureViewItem);
-      }, 950);
+      }, 150);
 
       // 미래 요소는 undefined로 초기화 합니다.
       setTimeout(() => {
         setFutureViewItem(undefined);
-      }, 1000);
+      }, 200);
     }
   }, [futureViewItem]);
 

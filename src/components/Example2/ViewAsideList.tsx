@@ -1,11 +1,11 @@
-import { ViewItem } from "../types";
+import { items } from "../../model/Items";
+import { ViewItem } from "../../types";
 
 type ViewAsideListProps = {
-  items: ViewItem[];
-  onClick: (item: ViewItem) => void;
+  onClickItem: (item: ViewItem) => void;
 };
 
-export default function ViewAsideList({ items, onClick }: ViewAsideListProps) {
+export default function ViewAsideList({ onClickItem }: ViewAsideListProps) {
   return (
     <section className="basis-5/12">
       <ul className="flex gap-4 md:flex-col md:gap-6">
@@ -13,7 +13,7 @@ export default function ViewAsideList({ items, onClick }: ViewAsideListProps) {
           <li
             key={item.id}
             className="flex flex-col gap-2 items-center cursor-pointer"
-            onClick={() => onClick(item)}
+            onClick={() => onClickItem(item)}
           >
             <img
               src={item.img}
