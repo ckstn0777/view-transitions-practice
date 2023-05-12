@@ -4,6 +4,8 @@ import ViewMain from "../../components/Example2/ViewMain";
 import { items } from "../../model/Items";
 import { ViewItem } from "../../types";
 
+import "./style.css";
+
 export default function Example2() {
   const [currentViewItem, setCurrentViewItem] = useState(items[0]);
 
