@@ -1,0 +1,23 @@
+.view-main-thumbnail {
+  view-transition-name: view-main-thumb;
+}
+.view-selected-thumbnail {
+  view-transition-name: view-selected-thumb;
+}
+
+::view-transition-old(view-main-thumb),
+::view-transition-new(view-main-thumb) {
+  animation-name: none;
+}
+
+::view-transition-old(view-main-thumb) {
+  opacity: 1;
+}
+::view-transition-new(view-main-thumb) {
+  opacity: 0;
+}
+
+::view-transition-old(view-selected-thumb) {
+  mix-blend-mode: normal;
+  z-index: 1;
+}

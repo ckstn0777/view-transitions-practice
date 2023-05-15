@@ -46,6 +46,19 @@ function App() {
             </span>
           </a>
         </li>
+        <li>
+          <a
+            href={`/view-transitions-practice/example/4`}
+            className="main-card px-8 py-8"
+          >
+            <h2 className="text-2xl font-bold mt-2 mb-6">
+              View Transitions API #3
+            </h2>
+            <span className="main-card-title">
+              더 멋진 View Transitions 을 추가해보자
+            </span>
+          </a>
+        </li>
       </ul>
     </>
   );

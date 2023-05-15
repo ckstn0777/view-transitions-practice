@@ -6,6 +6,7 @@ import "./index.css";
 import Example1 from "./pages/Example1";
 import Example2 from "./pages/Example2";
 import Example3 from "./pages/Example3";
+import Example4 from "./pages/Example4";
 
 const router = createBrowserRouter(
   [
@@ -24,6 +25,10 @@ const router = createBrowserRouter(
     {
       path: "/example/3",
       element: <Example3 />,
+    },
+    {
+      path: "/example/4",
+      element: <Example4 />,
     },
   ],
   {
